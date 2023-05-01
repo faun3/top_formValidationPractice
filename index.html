@@ -9,11 +9,19 @@
     <title>Form</title>
   </head>
   <body>
-    <form>
+    <form novalidate>
       <p>Cool form</p>
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required />
-      <span class="error"></span>
+      <p>
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          minlength="8"
+          maxlength="25" />
+        <span class="error"></span>
+      </p>
       <label for="country">Country</label>
       <input id="country" name="country" type="text" required />
       <label for="zipcode">Zip Code</label>
