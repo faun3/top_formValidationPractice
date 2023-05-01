@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="form.js" defer></script>
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <title>Form</title>
   </head>
   <body>
     <form>
       <p>Cool form</p>
       <label for="email">Email</label>
-      <input name="email" type="email" required />
+      <input id="email" name="email" type="email" required />
       <label for="country">Country</label>
-      <input name="country" type="text" required />
+      <input id="country" name="country" type="text" required />
       <label for="zipcode">Zip Code</label>
-      <input name="zipcode" type="text" required />
+      <input id="zipcode" name="zipcode" type="text" required />
       <label for="password">Password</label>
-      <input name="password" type="password" required />
+      <input id="password" name="password" type="password" required />
       <label for="passwordConfirm">Confirm Password</label>
-      <input for="passwordConfirm" type="password" required />
+      <input id="passConfirm" for="passwordConfirm" type="password" required />
       <button>Send</button>
     </form>
   </body>
