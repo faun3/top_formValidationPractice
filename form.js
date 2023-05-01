@@ -1,1 +1,3 @@
-console.log("hello world");
+/*
+all validation must occur in this javascript file
+*/
