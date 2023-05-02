@@ -31,6 +31,36 @@ const emailObject = (() => {
   };
 })();
 
+const passConfirmObject = (() => {
+  const passInput = document.getElementById("password");
+  const passConfirmInput = document.getElementById("passwordConfirm");
+
+  const confirmError = document.querySelector("#passwordConfirm + span.error");
+
+  passConfirmInput.addEventListener("blur", (event) => {
+    if (matchChecker()) {
+      confirmError.textContent = "";
+      passConfirmInput.className = "valid";
+      confirmError.className = "error";
+    } else {
+      passConfirmInput.className = "invalid";
+      printMismatchError();
+      event.preventDefault;
+    }
+  });
+
+  const matchChecker = () => {
+    if (passInput.value !== passConfirmInput.value) {
+      return false;
+    } else return true;
+  };
+
+  const printMismatchError = () => {
+    confirmError.textContent = "Passwords do not match!";
+    confirmError.className = "error active";
+  };
+})();
+
 const checkZipcode = () => {
   const zipcodeInput = document.getElementById("zipcode");
 };
