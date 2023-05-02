@@ -32,10 +32,18 @@
         required
         minlength="5"
         maxlength="5" />
-      <label for="password">Password</label>
-      <input id="password" name="password" type="password" required />
-      <label for="passwordConfirm">Confirm Password</label>
-      <input id="passConfirm" for="passwordConfirm" type="password" required />
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required />
+        <label for="passwordConfirm">Confirm Password</label>
+        <input
+          id="passwordConfirm"
+          for="passwordConfirm"
+          name="passwordConfirm"
+          type="password"
+          required />
+        <span class="error"></span>
+      </div>
       <button>Send</button>
     </form>
   </body>
