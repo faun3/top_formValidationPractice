@@ -4,6 +4,24 @@ all validation must occur in this javascript file
 
 const form = document.querySelector("form");
 
+//TODO
+//form must be its own object that inherits some sort of boolean returning
+//  function that every input field associated function must expose
+//
+//if all those functions return true, we submit the form
+//  else we do not submit by preventing the event
+
+const formObject = () => {
+  form.addEventListener("submit", (event) => {
+    if (checkAllValids) {
+      alert("Everything was filled in properly!");
+    } else {
+      event.preventDefault();
+      alert("Bad form submission attempt!");
+    }
+  });
+};
+
 const emailObject = (() => {
   const emailInput = document.getElementById("email");
   const emailError = document.querySelector("#email + span.error");
