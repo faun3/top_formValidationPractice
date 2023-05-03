@@ -11,16 +11,33 @@ const form = document.querySelector("form");
 //if all those functions return true, we submit the form
 //  else we do not submit by preventing the event
 
-const formObject = () => {
-  form.addEventListener("submit", (event) => {
-    if (checkAllValids) {
+const formObject = (() => {
+  const formSubmitButton = document.getElementById("submitButton");
+  formSubmitButton.addEventListener("click", () => {
+    if (checkAllValids()) {
       alert("Everything was filled in properly!");
     } else {
-      event.preventDefault();
       alert("Bad form submission attempt!");
+      event.preventDefault();
     }
   });
-};
+
+  const checkAllValids = () => {
+    const emailInput = document.getElementById("email");
+    const countryInput = document.getElementById("country");
+    const zipcodeInput = document.getElementById("zipcode");
+    const passConfirmInput = document.getElementById("passwordConfirm");
+
+    if (
+      emailInput.validity.valid &&
+      countryInput.validity.valid &&
+      zipcodeInput.validity.valid &&
+      !passConfirmInput.classList.contains("invalid")
+    )
+      return true;
+    else return false;
+  };
+})();
 
 const emailObject = (() => {
   const emailInput = document.getElementById("email");
