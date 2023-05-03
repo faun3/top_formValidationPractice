@@ -15,7 +15,7 @@ const formObject = (() => {
   const formSubmitButton = document.getElementById("submitButton");
   formSubmitButton.addEventListener("click", () => {
     if (checkAllValids()) {
-      alert("Everything was filled in properly!");
+      alert("Everything was filled in properly! High five! ✋");
     } else {
       alert("Bad form submission attempt!");
       event.preventDefault();
